@@ -1,0 +1,16 @@
+.searchComparison {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.loading {
+    padding: 40px;
+    text-align: center;
+    color: #666;
+}
+
+.columns {
+    display: flex;
+    gap: 16px;
+}
