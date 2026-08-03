@@ -1,11 +1,11 @@
-import type {ChangeEvent} from 'react'
-import styles from './styles.module.css'
+import type {ChangeEvent} from 'react';
+import styles from './styles.module.css';
 
 type InputProps = {
-    value: string
-    onChange: (value: string) => void
-    placeholder?: string
-}
+    value: string;
+    onChange: (value: string) => void;
+    placeholder?: string;
+};
 
 export const Input = ({value, onChange, placeholder}: InputProps) => (
     <input
@@ -15,4 +15,4 @@ export const Input = ({value, onChange, placeholder}: InputProps) => (
         onChange={(event: ChangeEvent<HTMLInputElement>) => onChange(event.target.value)}
         placeholder={placeholder}
     />
-)
+);

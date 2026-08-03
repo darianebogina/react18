@@ -1,17 +1,17 @@
-import {useState} from 'react'
-import {PostCard} from '@/entities/post'
-import {Input} from '@/shared/ui'
-import styles from './styles.module.css'
+import {useState} from 'react';
+import {PostCard} from '@/entities/post';
+import {Input} from '@/shared/ui';
+import styles from './styles.module.css';
 import {filterPosts, Post} from "@/shared/lib";
 
 type SyncSearchProps = {
-    posts: Post[]
-}
+    posts: Post[];
+};
 
 export const SyncSearch = ({posts}: SyncSearchProps) => {
-    const [query, setQuery] = useState('')
+    const [query, setQuery] = useState('');
 
-    const filtered = filterPosts(posts, query)
+    const filtered = filterPosts(posts, query);
 
     return (
         <div className={styles.syncSearch}>
@@ -28,5 +28,5 @@ export const SyncSearch = ({posts}: SyncSearchProps) => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};

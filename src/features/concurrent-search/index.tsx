@@ -1,27 +1,26 @@
-import {useState, useTransition} from 'react'
-import {PostCard} from '@/entities/post'
-
-import {Input} from '@/shared/ui'
-import styles from './styles.module.css'
+import {useState, useTransition} from 'react';
+import {PostCard} from '@/entities/post';
+import {Input} from '@/shared/ui';
+import styles from './styles.module.css';
 import {filterPosts, Post} from "@/shared/lib";
 
 type ConcurrentSearchProps = {
-    posts: Post[]
-}
+    posts: Post[];
+};
 
 export const ConcurrentSearch = ({posts}: ConcurrentSearchProps) => {
-    const [inputValue, setInputValue] = useState('')
-    const [query, setQuery] = useState('')
-    const [isPending, startTransition] = useTransition()
+    const [inputValue, setInputValue] = useState('');
+    const [query, setQuery] = useState('');
+    const [isPending, startTransition] = useTransition();
 
     const handleChange = (value: string) => {
-        setInputValue(value)
+        setInputValue(value);
         startTransition(() => {
-            setQuery(value)
-        })
-    }
+            setQuery(value);
+        });
+    };
 
-    const filtered = filterPosts(posts, query)
+    const filtered = filterPosts(posts, query);
 
     return (
         <div className={styles.column}>
@@ -39,5 +38,5 @@ export const ConcurrentSearch = ({posts}: ConcurrentSearchProps) => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};

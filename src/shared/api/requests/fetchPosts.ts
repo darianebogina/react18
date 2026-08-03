@@ -1,8 +1,8 @@
-import {POSTS_API_URL, TARGET_POSTS_COUNT} from '@/shared/config'
+import {POSTS_API_URL, TARGET_POSTS_COUNT} from '@/shared/config';
 import {Post} from "@/shared/lib";
 
 const multiplyPosts = (original: Post[], targetCount: number): Post[] => {
-    const copiesNeeded = Math.ceil(targetCount / original.length)
+    const copiesNeeded = Math.ceil(targetCount / original.length);
 
     return Array.from({length: copiesNeeded}, (_, copyIndex) =>
         original.map((post, index) => ({
@@ -12,17 +12,17 @@ const multiplyPosts = (original: Post[], targetCount: number): Post[] => {
         })),
     )
         .flat()
-        .slice(0, targetCount)
-}
+        .slice(0, targetCount);
+};
 
 export const fetchPosts = async (): Promise<Post[]> => {
-    const response = await fetch(POSTS_API_URL)
+    const response = await fetch(POSTS_API_URL);
 
     if (!response.ok) {
-        throw new Error(`Failed to fetch posts: ${response.status}`)
+        throw new Error(`Failed to fetch posts: ${response.status}`);
     }
 
-    const posts: Post[] = await response.json()
+    const posts: Post[] = await response.json();
 
-    return multiplyPosts(posts, TARGET_POSTS_COUNT)
-}
+    return multiplyPosts(posts, TARGET_POSTS_COUNT);
+};
