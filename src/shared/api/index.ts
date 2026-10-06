@@ -1,1 +1,1 @@
-export {fetchPosts} from './requests';
+export {fetchPosts, fetchUser} from './requests';
