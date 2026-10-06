@@ -1,9 +1,9 @@
 import { createRoot } from 'react-dom/client';
-import { SearchDemoPage } from '@/pages/search-demo';
+import { App } from './app';
 import '@/index.css';
 
 createRoot(document.getElementById('root')!).render(
   // <StrictMode>
-    <SearchDemoPage />
+    <App />
   // </StrictMode>,
 );
