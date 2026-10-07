@@ -1,0 +1,10 @@
+.list {
+    height: 600px;
+    overflow-y: auto;
+    padding: 0 16px 16px;
+}
+
+.stale {
+    opacity: 0.5;
+    transition: opacity 0.2s 0.1s;
+}
