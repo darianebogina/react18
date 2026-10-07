@@ -1,0 +1,14 @@
+.tabButton {
+    padding: 8px 12px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom-color: #6b6bf0;
+}

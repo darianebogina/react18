@@ -4,3 +4,9 @@ export type Post = {
     body: string;
     userId: number;
 };
+
+export type User = {
+    id: number;
+    name: string;
+    email: string;
+};
