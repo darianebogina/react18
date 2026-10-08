@@ -16,3 +16,7 @@
     opacity: 0.5;
     cursor: default;
 }
+
+.active {
+    background: #3d3db0;
+}

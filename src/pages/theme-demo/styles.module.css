@@ -1,0 +1,12 @@
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.steps {
+    margin: 0 0 24px;
+    padding-left: 20px;
+    color: #555;
+    line-height: 1.6;
+}
