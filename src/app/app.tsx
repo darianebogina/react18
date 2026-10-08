@@ -1,5 +1,6 @@
 import {SearchDemoPage} from '@/pages/search-demo';
 import {BatchingDemoPage} from '@/pages/batching-demo';
+import {DeferredDemoPage} from '@/pages/deferred-demo';
 import {TabComponent, Tabs} from '@/shared/ui/tabs';
 import styles from './styles.module.css';
 
@@ -11,6 +12,9 @@ export const App = () => (
             </TabComponent>
             <TabComponent eventKey="batching" title="Automatic batching">
                 <BatchingDemoPage/>
+            </TabComponent>
+            <TabComponent eventKey="deferred" title="useDeferredValue">
+                <DeferredDemoPage/>
             </TabComponent>
         </Tabs>
     </div>

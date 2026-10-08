@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import {useState, useTransition} from 'react';
 import {PostCard} from '@/entities/post';
 import {Input} from '@/shared/ui';
@@ -26,13 +27,12 @@ export const ConcurrentSearch = ({posts}: ConcurrentSearchProps) => {
         <div className={styles.column}>
             <div className={styles.header}>
                 <h2>Конкурентный</h2>
-                {isPending && <span className={styles.pendingLabel}>Обновляется…</span>}
                 <span className={styles.count}>{filtered.length}</span>
             </div>
             <div className={styles.inputWrap}>
                 <Input value={inputValue} onChange={handleChange} placeholder="Поиск по постам..."/>
             </div>
-            <div className={styles.list}>
+            <div className={clsx(styles.list, isPending && styles.stale)}>
                 {filtered.map((post) => (
                     <PostCard key={post.id} post={post}/>
                 ))}

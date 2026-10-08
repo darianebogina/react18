@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 
 export const BatchingDemoPage = () => (
     <div className={styles.page}>
-        <h1>Автобатчинг</h1>
+        <h1>Autobatching</h1>
         <BatchingComparison/>
     </div>
 );
