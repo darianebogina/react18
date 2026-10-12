@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { ReactNode, useState } from 'react';
 import { TabProps } from '../tab';
 import { TabButton } from '../tab-button';
+import { TabActiveProvider } from './context';
 import { mapChildren } from './lib';
 import styles from './styles.module.css';
 
@@ -34,15 +35,18 @@ export const Tabs = ({ children }: TabsProps) => {
 
             {mapChildren<TabProps>(children, (child, index) => {
                 const { eventKey, children: childChildren } = child.props;
+                const active = isActive(eventKey, index);
 
                 return (
                     <div
                         role="tabpanel"
                         id={`panel-${eventKey}`}
                         aria-labelledby={`tab-${eventKey}`}
-                        className={clsx(!isActive(eventKey, index) && styles.hidden)}
+                        className={clsx(!active && styles.hidden)}
                     >
-                        {childChildren}
+                        <TabActiveProvider value={active}>
+                            {childChildren}
+                        </TabActiveProvider>
                     </div>
                 );
             })}
