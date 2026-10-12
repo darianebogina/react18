@@ -2,6 +2,7 @@ import {SearchDemoPage} from '@/pages/search-demo';
 import {BatchingDemoPage} from '@/pages/batching-demo';
 import {DeferredDemoPage} from '@/pages/deferred-demo';
 import {ThemeDemoPage} from '@/pages/theme-demo';
+import {ImperativeDemoPage} from '@/pages/imperative-demo';
 import {TabComponent, Tabs} from '@/shared/ui/tabs';
 import styles from './styles.module.css';
 
@@ -19,6 +20,9 @@ export const App = () => (
             </TabComponent>
             <TabComponent eventKey="theme" title="useSyncExternalStore">
                 <ThemeDemoPage/>
+            </TabComponent>
+            <TabComponent eventKey="imperative" title="useImperativeHandle">
+                <ImperativeDemoPage/>
             </TabComponent>
         </Tabs>
     </div>

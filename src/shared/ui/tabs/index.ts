@@ -1,1 +1,1 @@
-export { TabComponent, Tabs } from './ui';
+export { TabComponent, Tabs, useIsTabActive } from './ui';
