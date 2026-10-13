@@ -1,2 +1,3 @@
 export { fetchPosts} from './fetchPosts.ts';
 export { fetchUser } from './fetchUser.ts';
+export { sendMessage } from './sendMessage.ts';

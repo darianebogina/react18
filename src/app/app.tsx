@@ -3,6 +3,7 @@ import {BatchingDemoPage} from '@/pages/batching-demo';
 import {DeferredDemoPage} from '@/pages/deferred-demo';
 import {ThemeDemoPage} from '@/pages/theme-demo';
 import {ImperativeDemoPage} from '@/pages/imperative-demo';
+import {OptimisticDemoPage} from '@/pages/optimistic-demo';
 import {TabComponent, Tabs} from '@/shared/ui/tabs';
 import styles from './styles.module.css';
 
@@ -23,6 +24,9 @@ export const App = () => (
             </TabComponent>
             <TabComponent eventKey="imperative" title="useImperativeHandle">
                 <ImperativeDemoPage/>
+            </TabComponent>
+            <TabComponent eventKey="optimistic" title="useOptimistic">
+                <OptimisticDemoPage/>
             </TabComponent>
         </Tabs>
     </div>
