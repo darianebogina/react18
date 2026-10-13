@@ -1,0 +1,49 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-self: flex-start;
+    max-width: 70%;
+    padding: 10px 14px;
+    color: #fff;
+    background: #6b6bf0;
+    border-radius: 12px;
+}
+
+.sending {
+    opacity: 0.5;
+}
+
+.failed {
+    background: #d64545;
+}
+
+.status {
+    font-size: 12px;
+}
+
+.empty {
+    color: #888;
+}
+
+.form {
+    display: flex;
+    gap: 8px;
+}
