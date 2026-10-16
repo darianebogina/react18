@@ -12,3 +12,8 @@ export type User = {
 };
 
 export type Theme = 'light' | 'dark';
+
+export type Message = {
+    id: string;
+    text: string;
+};
