@@ -4,6 +4,7 @@ import {DeferredDemoPage} from '@/pages/deferred-demo';
 import {ThemeDemoPage} from '@/pages/theme-demo';
 import {ImperativeDemoPage} from '@/pages/imperative-demo';
 import {OptimisticDemoPage} from '@/pages/optimistic-demo';
+import {ReducerDemoPage} from '@/pages/reducer-demo';
 import {TabComponent, Tabs} from '@/shared/ui/tabs';
 import styles from './styles.module.css';
 
@@ -27,6 +28,9 @@ export const App = () => (
             </TabComponent>
             <TabComponent eventKey="optimistic" title="useOptimistic">
                 <OptimisticDemoPage/>
+            </TabComponent>
+            <TabComponent eventKey="reducer" title="useReducer">
+                <ReducerDemoPage/>
             </TabComponent>
         </Tabs>
     </div>
